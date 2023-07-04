@@ -1,0 +1,38 @@
+
+<!-- <button mat-raised-button color="primary" (click)="OnAdd()" ><mat-icon>add</mat-icon>Add Customer</button> -->
+<hr>
+<table class="table table-bordered border-primary">
+    <thead>
+        <tr>
+          <th scope="col">id</th>
+          <th scope="col">Firstname</th>
+          <th scope="col">middlename</th>
+          <th scope="col">lastname</th>
+          <th scope="col">address</th>
+          <th scope="col">email</th>
+          <th scope="col">gender</th>
+
+<th>edit</th>
+<th>delete</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let list of customerList"> 
+          <td>{{list.id}}</td>
+          <td>{{list.firstName}}</td>
+          <td>{{list.middleName}}</td>
+          <td>{{list.lastName}}</td>
+          <td>{{list.address}}</td>
+          <td>{{list.email}}</td>
+          <td>{{list.gender}}</td>
+
+          <td><button mat-raised-button color="primary" (click)="OnEdit(list)"  ><mat-icon>edit</mat-icon>edit</button></td>
+          <td><button mat-raised-button color="warn" (click)="Delete(list.id)"  ><mat-icon>delete</mat-icon>delete</button></td> 
+
+
+
+        </tr>
+        
+      </tbody>
+  </table>
